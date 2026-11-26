@@ -1,0 +1,142 @@
+.referrer-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 48px 32px 64px;
+  text-align: left;
+}
+
+.referrer-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.referrer-page__brand {
+  font-family: var(--heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.referrer-page__header h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.referrer-page__subtitle {
+  color: var(--text);
+  max-width: 42ch;
+}
+
+.referrer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+}
+
+.referrer-panel h2 {
+  margin: 0 0 4px;
+}
+
+.referrer-panel__block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.referrer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.referrer-field__label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.referrer-field__value {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.referrer-field__value.is-empty {
+  color: var(--text);
+  font-style: italic;
+}
+
+.query-params {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.query-params__item {
+  display: grid;
+  grid-template-columns: minmax(96px, 140px) 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.query-params__key {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  padding-top: 10px;
+}
+
+.query-params__value {
+  display: block;
+  padding: 8px 12px;
+  overflow-x: auto;
+  word-break: break-all;
+  font-size: 13px;
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.query-params__empty {
+  font-size: 14px;
+  color: var(--text);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .referrer-page {
+    padding: 32px 20px 48px;
+  }
+
+  .query-params__item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .query-params__key {
+    padding-top: 0;
+  }
+}
